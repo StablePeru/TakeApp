@@ -1,0 +1,351 @@
+PROP_OPTIMIZADA
+
+TAKE 1
+00 00 22 09
+V.O.:	(ad lib)
+MEDA:	Ez duzu jan behar?
+ELIAS:	(ad lib) _ Ongi zaude? _ Zuri-zuri zaude. _ Mm?
+NINA:	Barkatu. Hilekoa etorri zait.
+00 00 52 08
+
+TAKE 2
+00 01 05 22
+IZENBURUA:	#annadesagertuda
+ATALA:	#egunekoargazkia
+00 01 11 01
+
+TAKE 3
+00 01 11 01
+NINA:	hebefilia desagertutako haurrak Echo aplikazioa
+00 01 24 23
+
+TAKE 4
+00 01 38 06
+LINDA:	Udaberri-lore oiloa eta ibuprofenoa dakarkizut.
+NINA:	Mila esker.
+LINDA:	Zera... beste zerbait gertatzen da? (atzean) Badakizu edozein gauza konta diezadakezula. _ Ezta?
+00 02 00 17
+
+TAKE 5
+00 02 04 18
+NINA:	Zer esan nahi duzu? _ Dena doa... primeran. (ad lib) _ Ez da hala?
+LINDA:	(gainean) Atzo gauean afaltzen galdetu zenuen...
+MEDA:	(off-on) (kantari)
+LINDA:	(ad lib) Meda! (atzean) Utzi ahizpari lasai egoten. (on) Zatoz estudiora. Nire modeloa izango zara.
+MEDA:	Aupa!
+00 02 32 02
+
+TAKE 6
+00 02 41 24
+ROBIN:	Kaixo.
+NINA:	(gainean) (atzean) Kaixo.
+ROBIN:	Bazterrak miatzen ibili naiz. (off) Oso gordin hitz egiten du eta estimazio handia dauka leku guztietan: YouTube, Insta, TikTok... (off-on) Bat-batean utzi zion mezuak publikatzeari, leku guztietan egun berean:
+00 03 06 12
+
+TAKE 7
+00 03 06 12
+ROBIN:	(off) irailaren 29an, duela astebete baino gehiago. Jarraitzaileak haserre daude, baina ez dago istripu baten edo desagertze baten berri. Ez despedidarik, ez selfierik Balitik, ez suizidio baten GIFik... Oso arraroa.
+ROTULO:	Bidalketa-eguna: 2022ko irailak 29
+NINA:	Jakin genezake non bizi den?
+00 03 29 16
+
+TAKE 8
+00 03 29 16
+ANNA:	(off-on) Ez espero larrua jotzea zurekin jo nahi ez duenarekin. Jotzea espero baduzu, problema bat daukazu.
+00 03 38 01
+
+TAKE 9
+00 03 38 01
+ANNA:	Galdetu egin behar diozu. Mutilari edo neskari galdetu behar diozu. Galdetu egin behar diozu. "Barkatu, berotu zaitzaket, mesedez?" (ad lib) "Barkatu, zera sartzen utziko didazu?" "Berdin zaizu zakila laztantzen badizut?"
+00 03 51 08
+
+TAKE 10
+00 03 51 08
+ANNA:	(off) Bukatu da pasiozko gaua. Orain ja ez daukazu gogorik. (on) Baina modu sexy batean eska diezaiokezu. Sexya izatea lor dezakezu. Hori da oso... (ad lib) zirraragarria. (ad lib) Hori da... tira, berriro.
+00 04 13 24
+
+TAKE 11
+00 04 39 12
+ANNA:	Berandu ari zara gosaltzen.
+00 04 40 10
+
+TAKE 12
+00 04 40 10
+SABINA:	Biharko gosaria da, sarean jartzeko.
+ANNA:	Bukatu duzu? Bazkaltzeko jan nahi nuke.
+SABINA:	(ad lib) Ileko espraia bota diot. (on-off) Ahuakatea ilundu ez dadin.
+ANNA:	(ad lib) _ Zera, Kroaziako nire argazki bat publikatu duzu. Ezabatu, mesedez. Gorroto dut.
+SABINA:	(off-on) Ez da antzematen zu zarela. Ume bat da. Uretan jolasten.
+00 05 05 18
+
+TAKE 13
+00 05 05 18
+ANNA:	Bainujantzirik gabe. (off) 8 urte nituela. (on) Eta etiketa jarri zenidan. Ezabatu, mesedez.
+SABINA:	Ezin ote naiz nire alabaz harro egon?
+ANNA:	Ene! Beti berdin gara! Nire bizia da. Nire intimitatea!
+SABINA:	Alaba zaitut! Anna, hipokrita hutsa zara. Zuk zera hitz egiten duzu bideoetan... birjinitatea galtzeaz.
+ANNA:	Birjina izatearen lotsa!
+SABINA:	(gainean) Baina nik, amak, ezin ditut publikatu itsasoko zure argazkiak.
+00 05 33 16
+
+TAKE 14
+00 05 33 16
+ANNA:	Zuk like-ak lortu nahi dituzu!
+SABINA:	(ad lib)
+ANNA:	(gainean) (off-on) Aizu, zeure buruaz idatzi nahi badiezu zu bezalako ama aspergarriei sare sozialetan, segi lasai aurrera!
+SABINA:	(gainean) (ad lib)
+ANNA:	Baina arren, ez nazazu sartu horretan.
+SABINA:	Jendea inspiratu nahi dut, zuk bezala. (off) Baina pixka bat desberdin. (on) Bizimodu erosoa, alaba ederra, gorputz polita, etxe apaina...
+ANNA:	(off) Aitaren etxea.
+00 05 54 21
+
+TAKE 15
+00 05 54 21
+SABINA:	Nahikoa da! Guk biok ez dugu horrela hitz egiten.
+ANNA:	(off-on) Guk biok ez dugu hitz egiten. Izan ere, ni ez naiz sartzen zuk familia perfektuaz duzun ideian, ezta? (off-on) Agian biok hamaiketako bat egin beharrean, lagun minen antzera, borrokan egin behar genuke. (on-off) Hemengo kirats itogarri honetan haize pixka bat!
+SABINA:	Itotzen ari bazara, zoaz kanpora. Zurbil zaude, beti kameraren aurrean egonda.
+MOM'S LOVER:	Egun on.
+ANNA:	Kaixo.
+00 06 21 01
+
+TAKE 16
+00 06 28 13
+SABINA:	Makillajea.
+ANNA:	Sinestezina! (on-off) Bi hankako salmenta-katalogo bat zara.
+SABINA:	(ad lib)
+ANNA:	(gainean) (off) Kanpotik kitscha, barrutik likitsa.
+SABINA:	(gainean) Ordua hartuko dizut nire terapeutarekin. Barrena hustu beharra daukazu.
+ANNA:	Nigatik, segi lasai zure zabor faltsu hori dena publikatzen, baina ez niri odola gehiago zurrupatu.
+00 06 54 21
+
+TAKE 17
+00 07 09 11
+ROTULO:	Norbaitek badakizue Annaren helbidea? Nik ez. Bilatu Googlen. Ez dakit. Sentitzen dut. Helbidea jakiten baduzu, bidalidazu.
+00 07 20 08
+
+TAKE 18
+00 07 20 08
+ROTULO:	Zergatik galdetzen didazu niri? Denoi galdetu dizuet. Zertarako jakin nahi duzu? Berarekin hitz egin behar dut. Badakizu bere helbidea?
+00 07 37 16
+
+TAKE 19
+00 07 37 16
+ROTULO:	Mesedez... Garrantzitsua da...
+NINA:	Meda!
+MEDA:	Musikaren bidez adierazten dut neure burua. Kate motzean naukazu!
+ROTULO:	Aurkitu egin behar dut. Elkar ezagutzen duzue? Zergatik zabiltza bere bila? Baina zergatik?
+00 08 05 20
+
+TAKE 20
+00 08 05 20
+ROTULO:	Agian zerbait gertatu zaiola uste dut... Kontu luzea da... Deitu diezazuket?
+NINA:	(ad lib)
+00 08 34 15
+
+TAKE 21
+00 08 34 15
+ROTULO:	Kontu hau pribatua da. Argazkiak eta bideoak ikusteko, jarraitu.
+NINA:	(off) (ad lib)
+ROTULO:	Jarraipen-eskaera
+NINA:	(ad lib)
+00 09 01 21
+
+TAKE 22
+00 09 03 07
+TEREZA:	Kaixo.
+NINA:	Kaixo. Troll bat zinela uste nuen.
+TEREZA:	Bai. Eta zu jazarle bat zara?
+NINA:	Ez. Ee... Annari zerbait gertatu zaion susmoa daukat.
+TEREZA:	(off) Zer, baina?
+NINA:	Mm... Ezin dizut horretaz hitz egin.
+00 09 22 21
+
+TAKE 23
+00 09 22 21
+TEREZA:	Zuk nahi bezala deitu dizut. Ezin baduzu hitz egin, aio!
+NINA:	Agian bahitu egin dute. _ Edo... agian bahitu ez baina... norbaitek preso dauka nonbaiten.
+TEREZA:	Ee... nork, baina?
+NINA:	Hori berdin da. Zera... argazki batzuk ikusi dizkiot ustekabean... nire ezagun bati.
+TEREZA:	(off) Eta zure ezagun horrek zerbait egin dio eta horregatik desagertu da? (on) Hori uste baduzu, deitu poliziari.
+00 09 52 01
+
+TAKE 24
+00 09 52 01
+NINA:	Mm! Ez... eee... ez dut albiste faltsurik zabaldu nahi. Zera, ongi dagoela jakin nahi nuke.
+00 10 00 24
+
+TAKE 25
+00 10 00 24
+NINA:	Zuk ere bai, ezta? Bere bideoen falta daukazula idatzi duzu. Zera... badakizu non bizi den? (ad lib) Itxaron. (off) Niki bat eskatu nion Annari Internetez.
+TEREZA:	Zorionez, ez nuen kutxa bota.
+NINA:	(gainean) (ad lib)
+TEREZA:	Bai, hemen helbide bat dago. Ee... Sabina Urbancová.
+00 10 28 15
+
+TAKE 26
+00 10 33 02
+TEREZA:	(ad lib)
+ROTULO:	Zeure burua mimatu behar duzula esaten dute. Ona naiz horretan!
+NINA:	(off) Manikura egin behar zenuke.
+ROBIN:	Barrabilak! _ Ikusi. Hau ez da parte onekoa!
+NINA:	Andre hau ez dago ondo.
+ROBIN:	Mm. (ad lib)
+00 10 55 11
+
+TAKE 27
+00 11 00 18
+NINA:	Ee kaixo. Anna etxean dago? (atzean) Berarekin hitz egin beharra daukat. Hemen ez da Annarik bizi.
+ROBIN:	Mantal polita! Like eman nizun Facebooken. (atzean) Eta gorputz zoragarria duzu. 14 urteko alaba daukazula pentsatzea ere! 15 urtekoa. Anna ez dago etxean. Pilates egiten dut.
+00 11 23 12
+
+TAKE 28
+00 11 23 12
+ROBIN:	Eta non aurkitu genezake?
+SABINA:	(atzean) Ez dakit. Egunak daramatza etxetik kanpora. (atzean-on) Nahi baduzue, bere sinadura duten nikiak dauzkat salgai. 700ean.
+NINA:	Etxetik kanpora? (atzean) Non dabil ba?
+SABINA:	(ad lib)
+NINA:	(atzean) Ez zabiltza bere bila?
+ROBIN:	(atzean-on) Agian zerbait gertatu zaiola ari da jendea esaten.
+00 11 48 11
+
+TAKE 29
+00 11 48 11
+ROBIN:	Ez du ezer publikatu aspaldian. Bideo bereziren bat ariko da egiten. Besterik behar?
+NINA:	(atzean-on) Badakizu Annak mutil-lagunik daukan?
+ROBIN:	Zaharragoa den norbait.
+SABINA:	(atzean) Bidaliozue mezu bat. (on) Eta ez gehiago hona etorri. Errespetatu pribatutasuna.
+ROBIN:	(ad lib) Niki hori nahi nuen...
+NINA:	Ene! Benetan desagertu ote da?
+ROBIN:	Ama tuntun honengandik alde egin du. (off) Nik berdin egingo nuen.
+00 12 18 09
+
+TAKE 30
+00 12 20 00
+ELIAS:	(atzean) Bai zera! Ezin liteke! Eta zuk sinistu, ala? Milioika euro erreklamatzen ditu. Enpresak nola ez zuen egiaztatuko!
+ALENA:	(gainean) (ad lib) _ Ez, itxaron, ez hasi amaieratik. Erizainak...
+MAN:	(gainean) Kontatu zer gertatu zen.
+00 12 33 04
+
+TAKE 31
+00 12 33 04
+ALENA:	(off) ... gaixo bat zeraman gurpil-aulkian, eta igogailuan katigatu zitzaion hanka.
+NINA:	(ad lib)
+MAN:	(off) Eskerrak atzerantz ez zihoazen!
+ELIAS:	(gainean) Hara nor datorren.
+ALENA:	Kaixo.
+NINA:	Ahaztu egin zait lehenago etortzea.
+LINDA:	(off) Makina bat bider deitu dizut!
+ELIAS:	(off) Ee... eseri. (on) Eta? Zer moduz? (on-off) Non ibili zara?
+ALENA:	(off) Zer moduz gure neska Robin?
+00 12 59 19
+
+TAKE 32
+00 12 59 19
+ELIAS:	Mutila da!
+MAN:	O! Robin mutila da!
+ALENA:	(gainean) Robin mutila da. Ez bota arrautzarik aurpegira esan behar ez nuena esateagatik.
+NINA:	(off) Ez, lasai. (on) Gure artean ez dago sekreturik. Ezta, aita?
+ELIAS:	(ad lib)
+MAN:	(off) Hori ona da.
+ELIAS:	(off-on) Horrelakoxea da pubertaroa.
+MAN:	(off) (ad lib)
+00 13 23 24
+
+TAKE 33
+00 13 36 18
+ALENA:	Egun txarra?
+NINA:	(ad lib) _ Herpes genitala daukat. Azkura ematen dit, badakizu.
+ALENA:	Aizu ba... Nutella hartuta sendatuko zaizu!
+NINA:	Pixka bat nahi?
+ALENA:	Ez. Ea kutsatzen didazun! (ad lib)
+NINA:	(gainean) (ad lib)
+ALENA:	Eman ba. _ (ad lib)
+00 14 05 05
+
+TAKE 34
+00 14 07 17
+ALENA:	(off) Nina? (on) Ardoa ekarriko diguzu, mesedez?
+ELIAS:	(off) Nik ere horixe esan nion, baina berak ezetz eta ezetz.
+ALENA:	Kontaidazu.
+NINA:	Ez da ezer. Lasai.
+ALENA:	(ad lib)
+NINA:	(gainean) (ad lib)
+ALENA:	Gurasoekin hitz egitea zaila izan daiteke, baina zer kezka duzun kontatu nahi badidazu... Nutella eman didazu eta kontratatu egin nauzu.
+00 14 36 07
+
+TAKE 35
+00 14 36 07
+ALENA:	Zure abokatua naiz orain. (atzean) Mm? Konfidentzialtasunari eutsi behar diot. (gainean) (ad lib)
+00 14 51 00
+
+TAKE 36
+00 14 58 17
+ALENA:	Nondik atera duzu?
+NINA:	Aitagandik. Berak ez daki.
+ALENA:	(ad lib) _ Anna gure bezeroa da.
+NINA:	Bezeroa?
+ALENA:	(ad lib) _ Interneten biluzik ageri zen argazkiak kentzen lagundu genion.
+NINA:	Zer esan nahi duzu?
+ALENA:	Ahaztua izateko eskubidea negoziatu genuen Googlekin.
+NINA:	Hori posible da?
+00 15 23 15
+
+TAKE 37
+00 15 23 15
+ALENA:	Mm. Zorionez adingabea da eta arin egin genuen. Bestela, hilabeteak igaro daitezke. Webguneek kendu egin behar izan zituzten: argazkiak, izena, dena. Ezabatu zuk ere! Nork zabaldu ote du hau?
+00 15 39 13
+
+TAKE 38
+00 15 40 24
+ALENA:	Normalean mutil-ohia izaten da. (atzean-on) Kontuz ibili zure argazkiak eta bideoak bidaltzeko orduan. (on-atzean) Erabat maiteminduta bazaude ere. Hala egotea opa dizut. (ad lib) Pixa egitera noa. Etengabeko jarioa daukat.
+NINA:	(ad lib)
+00 16 06 01
+
+TAKE 39
+00 16 27 00
+ELIAS:	Nire mobila miatzen ibili zara?
+NINA:	(atzean) Zer? Ez.
+00 16 32 13
+
+TAKE 40
+00 16 39 02
+ROTULO:	GAILU BERRI BAT KONEKTATU DA ZURE KONTURA
+NINA:	(ad lib) (on-atzean) Zure mobila autoarekin lotzen ari nintzela... Annaren selfiea azaldu zitzaidan.
+ELIAS:	Eta auskalo zer pentsatu zenuen.
+NINA:	(atzean-on) Bai, Alenak kontatu dit argazkiena. Sentitzen dut. (atzean) Benetan.
+00 17 05 22
+
+TAKE 41
+00 17 05 22
+ELIAS:	Erabateko arduragabea izan naiz laneko materiala online gordeta. Nork eta alabak hackeatu nau. (atzean) Ez dakit zer sartu zaidan buruan. (on) Tuntuna izan naiz. (atzean) (ad lib) Pasaidazu Chianti bat. Haragiarekin hobeto doa.
+00 17 28 08
+
+TAKE 42
+00 17 31 07
+ELIAS:	(on) Zuzenean galdetu behar zenidan. Ezagutu ez bazenu bezala egin zenuen Medak tabletean jarri zuenean. Eta ez dut ezagutzen. Zer bideo egiten dituen ere ez dakit. Bezero bat da.
+00 17 44 10
+
+TAKE 43
+00 17 46 19
+NINA:	Aita... (atzean) Badakizu... (on) non egon litekeen?
+ELIAS:	Nola nahi duzu jakitea? Ez dugu bere berri izan azken bi hilabeteotan.
+ROTULO:	Bidalketa-eguna: 2022ko irailak 29
+ELIAS:	Gora joan behar dugu. Hau ez da itxura. (off) Goazen.
+NINA:	(ad lib)
+00 18 15 08
+
+TAKE 44
+00 18 17 03
+ROTULO:	Influencer adingabea bueltan da! Eraso lotsagarri bat egin diote 14 urteko A.ri Mendekuzko pornoa Traizioa! Baimena eskatu gabe zabaldu dituzte nire argazkiak
+00 18 34 13
+
+TAKE 45
+00 18 34 13
+ANNA:	(off-on) Seguru asko ikusi dituzue eta sutan nago. Hau mendekuzko pornoa izan da. (off) Bai, akats handia egin nuen. Baina denok egiten ditugu akatsak. (on) Ez dizuet esango nor izan den nire argazkiak zabaldu dituena.
+00 18 49 18
+
+TAKE 46
+00 18 49 18
+ANNA:	(off) Ez naiz bera bezain makurra. Baina ez dut neure burua biktimizatuko. (on) Gogoan izan. Eta zu... (off) badakit begira zaudela. (on) Merezi duzuna jasoko duzu, putakumea!
+00 19 04 00
+

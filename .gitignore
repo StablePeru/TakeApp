@@ -1,0 +1,13 @@
+# Ignorar entornos virtuales
+takeo_env/
+
+# Ignorar archivos temporales de Python
+*.pyc
+__pycache__/
+
+# Ignorar directorios de compilación
+/build/
+/dist/
+
+# Ignorar archivos de configuración locales
+.env
