@@ -7,6 +7,9 @@ import sys
 import functools
 from itertools import groupby
 from operator import itemgetter
+import tkinter as tk
+from tkinter import filedialog, messagebox
+import threading
 
 # Aumentar el límite de recursión si es necesario
 sys.setrecursionlimit(100000)
@@ -30,32 +33,6 @@ def time_to_timedelta(time_str):
     except Exception as e:
         print(f"Error al convertir tiempo: {time_str} - {e}")
         return timedelta(0)
-
-# 2. Leer y procesar los datos
-try:
-    df = pd.read_excel('ANNA IS MISSING-02.xlsx')
-except FileNotFoundError:
-    print("Error: El archivo 'ANNA IS MISSING-02.xlsx' no se encontró.")
-    exit(1)
-except Exception as e:
-    print(f"Error al leer el archivo Excel: {e}")
-    exit(1)
-
-# Verificar que todas las columnas necesarias existan
-columnas_necesarias = ['IN', 'OUT', 'PERSONAJE', 'DIÁLOGO', 'SCENE']
-for columna in columnas_necesarias:
-    if columna not in df.columns:
-        print(f"Error: La columna '{columna}' no se encuentra en el archivo Excel.")
-        exit(1)
-
-df['in_td'] = df['IN'].apply(time_to_timedelta)
-df['out_td'] = df['OUT'].apply(time_to_timedelta)
-df['duracion'] = (df['out_td'] - df['in_td']).dt.total_seconds()
-df = df.sort_values(by=['in_td', 'out_td']).reset_index(drop=True)
-
-# 2.1. Identificar Cambios de Escena basados en la columna 'SCENE'
-df['cambio_escena'] = df['SCENE'] != df['SCENE'].shift(1)
-df['cambio_escena'].fillna(False, inplace=True)  # La primera fila no es un cambio de escena
 
 # 5. Dividir diálogos que excedan los 60 caracteres (excluyendo contenido entre paréntesis)
 def dividir_dialogo(dialogo, max_caracteres=60):
@@ -103,13 +80,6 @@ def clean_text(text):
         return text
     else:
         return text
-
-# 6. Aplicar la expansión de diálogos antes de asignar takes
-df = expandir_dialogos(df)
-
-# Limpiar las columnas de texto después de expandir diálogos
-df['DIÁLOGO'] = df['DIÁLOGO'].apply(clean_text)
-df['PERSONAJE'] = df['PERSONAJE'].apply(clean_text)
 
 # 3. Función para optimizar la división de *takes* en una escena
 def optimizar_takes_escena(intervenciones_escena, max_duracion_take=30, max_lineas_take=10, max_lineas_consecutivas=5):
@@ -185,7 +155,7 @@ def optimizar_takes_escena(intervenciones_escena, max_duracion_take=30, max_line
             current_cost = (total_takes_por_personaje, total_takes)
 
             if best_cost is None or current_cost < best_cost:
-                best_takes = [take_intervenciones] + next_takes
+                best_takes = [tuple(take_intervenciones)] + list(next_takes)
                 best_cost = current_cost
 
         if best_takes is None:
@@ -201,6 +171,7 @@ def optimizar_takes_escena(intervenciones_escena, max_duracion_take=30, max_line
     takes = []
     take_id = 1
     for take_intervenciones in best_takes:
+        take_intervenciones = list(take_intervenciones)
         takes.append({
             'take': take_id,
             'in': take_intervenciones[0]['in_td'],
@@ -213,8 +184,11 @@ def optimizar_takes_escena(intervenciones_escena, max_duracion_take=30, max_line
     return takes
 
 # 4. Función para asignar *takes* optimizados
-def asignar_takes_optimizado(df):
+def asignar_takes_optimizado(df, omit_rotulo=False):
     df = df.reset_index(drop=True)
+    if omit_rotulo:
+        df = df[df['PERSONAJE'].str.upper() != 'ROTULO'].reset_index(drop=True)
+    
     escenas = df['SCENE'].unique()
     all_takes = []
     take_global_id = 1
@@ -252,37 +226,156 @@ def calcular_total_takes_por_personaje(df_takes):
     suma_total_takes = takes_por_personaje['TOTAL_TAKES'].sum()
     return takes_por_personaje, suma_total_takes
 
-# 6. Asignar los *takes* optimizados después de expandir diálogos
-df_prop_optimizada = asignar_takes_optimizado(df)
+# Función principal para procesar el archivo
+def procesar_archivo(file_path, omit_rotulo, status_label):
+    try:
+        status_label.config(text="Leyendo el archivo Excel...")
+        df = pd.read_excel(file_path)
+    except FileNotFoundError:
+        messagebox.showerror("Error", f"El archivo '{file_path}' no se encontró.")
+        return
+    except Exception as e:
+        messagebox.showerror("Error", f"Error al leer el archivo Excel: {e}")
+        return
 
-# 8. Calcular y limpiar después de asignar *takes*
-df_prop_optimizada['DURACIÓN'] = df_prop_optimizada['DURACIÓN'].astype(float)
+    # Verificar que todas las columnas necesarias existan
+    columnas_necesarias = ['IN', 'OUT', 'PERSONAJE', 'DIÁLOGO', 'SCENE']
+    for columna in columnas_necesarias:
+        if columna not in df.columns:
+            messagebox.showerror("Error", f"La columna '{columna}' no se encuentra en el archivo Excel.")
+            return
 
-# 9. Calcular el total de *takes* por personaje
-takes_por_personaje_optimizada, suma_total_takes_optimizada = calcular_total_takes_por_personaje(df_prop_optimizada)
+    # Convertir tiempos a timedelta
+    status_label.config(text="Convirtiendo tiempos...")
+    df['in_td'] = df['IN'].apply(time_to_timedelta)
+    df['out_td'] = df['OUT'].apply(time_to_timedelta)
+    df['duracion'] = (df['out_td'] - df['in_td']).dt.total_seconds()
+    df = df.sort_values(by=['in_td', 'out_td']).reset_index(drop=True)
 
-# 10. Exportar la propuesta optimizada y el resumen a Excel
-try:
-    with pd.ExcelWriter('prop_optimizada.xlsx', engine='xlsxwriter') as writer:
-        # Exportar los *takes* de la propuesta optimizada
-        df_prop_optimizada.to_excel(writer, sheet_name='Optimizada_Takes', index=False)
-        
-        # Exportar el resumen de *takes* por personaje
-        takes_por_personaje_optimizada.to_excel(writer, sheet_name='Resumen', index=False)
-        
-        # Añadir la suma total de takes
-        workbook  = writer.book
-        worksheet = writer.sheets['Resumen']
-        # Escribir la suma total de takes debajo de la tabla
-        last_row = len(takes_por_personaje_optimizada) + 1
-        worksheet.write(f'A{last_row + 1}', 'Suma total de Takes:')
-        worksheet.write(f'B{last_row + 1}', suma_total_takes_optimizada)
-    print("La propuesta optimizada y su resumen han sido exportados a 'prop_optimizada.xlsx'")
-except Exception as e:
-    print(f"Error al exportar a Excel: {e}")
-    exit(1)
+    # Identificar Cambios de Escena basados en la columna 'SCENE'
+    df['cambio_escena'] = df['SCENE'] != df['SCENE'].shift(1)
+    df['cambio_escena'].fillna(False, inplace=True)  # La primera fila no es un cambio de escena
 
-# 11. Mostrar el resumen de *takes* por personaje en la consola
-print("Propuesta Optimizada:")
-print(takes_por_personaje_optimizada)
-print(f"Suma total de *Takes*: {suma_total_takes_optimizada}\n")
+    # Dividir diálogos que excedan los 60 caracteres
+    status_label.config(text="Dividiendo diálogos largos...")
+    df = expandir_dialogos(df)
+
+    # Limpiar las columnas de texto después de expandir diálogos
+    status_label.config(text="Limpiando texto...")
+    df['DIÁLOGO'] = df['DIÁLOGO'].apply(clean_text)
+    df['PERSONAJE'] = df['PERSONAJE'].apply(clean_text)
+
+    # Asignar los *takes* optimizados
+    status_label.config(text="Asignando *takes* optimizados...")
+    df_prop_optimizada = asignar_takes_optimizado(df, omit_rotulo=omit_rotulo)
+
+    # Calcular y limpiar después de asignar *takes*
+    df_prop_optimizada['DURACIÓN'] = df_prop_optimizada['DURACIÓN'].astype(float)
+
+    # Calcular el total de *takes* por personaje
+    status_label.config(text="Calculando resumen de *takes* por personaje...")
+    takes_por_personaje_optimizada, suma_total_takes_optimizada = calcular_total_takes_por_personaje(df_prop_optimizada)
+
+    # Exportar la propuesta optimizada y el resumen a Excel
+    status_label.config(text="Exportando a Excel...")
+    try:
+        with pd.ExcelWriter('prop_optimizada.xlsx', engine='xlsxwriter') as writer:
+            # Exportar los *takes* de la propuesta optimizada
+            df_prop_optimizada.to_excel(writer, sheet_name='Optimizada_Takes', index=False)
+
+            # Exportar el resumen de *takes* por personaje
+            takes_por_personaje_optimizada.to_excel(writer, sheet_name='Resumen', index=False)
+
+            # Añadir la suma total de takes
+            workbook  = writer.book
+            worksheet = writer.sheets['Resumen']
+            # Escribir la suma total de takes debajo de la tabla
+            last_row = len(takes_por_personaje_optimizada) + 1
+            worksheet.write(f'A{last_row + 1}', 'Suma total de Takes:')
+            worksheet.write(f'B{last_row + 1}', suma_total_takes_optimizada)
+        status_label.config(text="Exportación completada: 'prop_optimizada.xlsx'")
+        messagebox.showinfo("Éxito", "La propuesta optimizada y su resumen han sido exportados a 'prop_optimizada.xlsx'")
+    except Exception as e:
+        messagebox.showerror("Error", f"Error al exportar a Excel: {e}")
+        return
+
+    # Mostrar el resumen de *takes* por personaje en la consola
+    print("Propuesta Optimizada:")
+    print(takes_por_personaje_optimizada)
+    print(f"Suma total de *Takes*: {suma_total_takes_optimizada}\n")
+
+# Función para manejar el botón de selección de archivo
+def seleccionar_archivo(entry_label):
+    file_path = filedialog.askopenfilename(
+        title="Seleccionar archivo Excel",
+        filetypes=(("Archivos Excel", "*.xlsx *.xls"), ("Todos los archivos", "*.*"))
+    )
+    if file_path:
+        entry_label.config(text=file_path)
+
+# Función para manejar el botón de procesamiento
+def iniciar_procesamiento(file_label, omit_rotulo_var, status_label):
+    file_path = file_label.cget("text")
+    omit_rotulo = omit_rotulo_var.get()
+
+    if not file_path or file_path == "No se ha seleccionado ningún archivo":
+        messagebox.showwarning("Advertencia", "Por favor, selecciona un archivo Excel antes de procesar.")
+        return
+
+    # Ejecutar el procesamiento en un hilo separado para mantener la GUI responsive
+    threading.Thread(target=procesar_archivo, args=(file_path, omit_rotulo, status_label), daemon=True).start()
+
+# Configuración de la interfaz gráfica con Tkinter
+def crear_interfaz():
+    root = tk.Tk()
+    root.title("Optimización de *Takes*")
+
+    # Tamaño de la ventana
+    root.geometry("500x250")
+    root.resizable(False, False)
+
+    # Estilo de la fuente
+    fuente = ("Helvetica", 12)
+
+    # Frame principal
+    frame = tk.Frame(root, padx=20, pady=20)
+    frame.pack(fill=tk.BOTH, expand=True)
+
+    # Selección de archivo
+    file_label = tk.Label(frame, text="No se ha seleccionado ningún archivo", wraplength=400, justify="left")
+    file_label.pack(pady=(0, 10))
+
+    select_button = tk.Button(frame, text="Seleccionar Archivo Excel", command=lambda: seleccionar_archivo(file_label), width=25, font=fuente)
+    select_button.pack()
+
+    # Checkbox para omitir ROTULO
+    omit_rotulo_var = tk.BooleanVar()
+    omit_rotulo_checkbox = tk.Checkbutton(
+        frame,
+        text="Omitir ROTULO",
+        variable=omit_rotulo_var,
+        font=fuente
+    )
+    omit_rotulo_checkbox.pack(pady=(10, 10))
+
+    # Botón para iniciar procesamiento
+    process_button = tk.Button(
+        frame,
+        text="Iniciar Procesamiento",
+        command=lambda: iniciar_procesamiento(file_label, omit_rotulo_var, status_label),
+        width=20,
+        font=fuente,
+        bg="blue",
+        fg="white"
+    )
+    process_button.pack(pady=(0, 10))
+
+    # Label de estado
+    status_label = tk.Label(frame, text="Esperando...", font=fuente, fg="green", wraplength=400, justify="left")
+    status_label.pack(pady=(10, 0))
+
+    root.mainloop()
+
+# Ejecutar la interfaz gráfica
+if __name__ == "__main__":
+    crear_interfaz()
