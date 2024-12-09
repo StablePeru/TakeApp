@@ -77,7 +77,7 @@ def clean_text(text):
     else:
         return text
 
-# 5. Optimizar la división de *takes* en una escena
+# 5. Optimizar la división de *takes* en una escena considerando bloques con el mismo IN/OUT
 def optimizar_takes_escena(intervenciones_escena, max_duracion_take=30, max_lineas_take=10, max_lineas_consecutivas=5, max_lineas_por_personaje=5):
     intervenciones = []
     for idx, row in intervenciones_escena.iterrows():
@@ -96,64 +96,108 @@ def optimizar_takes_escena(intervenciones_escena, max_duracion_take=30, max_line
     if not intervenciones:
         return []
 
+    # Ordenar las intervenciones
     intervenciones_sorted = sorted(intervenciones, key=lambda x: (x['in_td'], x['out_td']))
-    bloques = [list(group) for key, group in groupby(intervenciones_sorted, key=lambda x: (x['in_td'], x['out_td']))]
+
+    # Agrupar las intervenciones por (in_td, out_td) para formar bloques indivisibles
+    bloques = []
+    for key, group in groupby(intervenciones_sorted, key=lambda x: (x['in_td'], x['out_td'])):
+        bloque = list(group)
+        bloques.append(bloque)
+
     n = len(bloques)
 
     @functools.lru_cache(maxsize=None)
     def dp(pos):
+        # dp devuelve (best_takes, best_cost)
+        # best_cost = suma total mínima de takes por personaje desde pos al final
         if pos >= n:
-            return [], (0, 0)
+            return [], 0
 
         best_takes = None
-        best_cost = None
+        best_cost = float('inf')
 
-        for end in range(pos + 1, n + 1):
-            take_bloques = bloques[pos:end]
-            take_intervenciones = [intervencion for bloque in take_bloques for intervencion in bloque]
+        # Intentar formar un take con uno o varios bloques consecutivos
+        take_intervenciones = []
+        take_in = None
+        take_out = None
 
-            duracion_take = take_intervenciones[-1]['out_td'] - take_intervenciones[0]['in_td']
+        personaje_lineas_totales_take = {}
+        personaje_lineas_consecutivas_take = {}
+        ultimo_personaje = None
+        lineas_count = 0
+
+        for end in range(pos, n):
+            bloque = bloques[end]
+            # Intentar añadir este bloque completo al take
+            bloque_valido = True
+            bloque_lineas = 0
+            bloque_cambios = []
+            temp_personaje_lineas_totales = dict(personaje_lineas_totales_take)
+            temp_personaje_lineas_consecutivas = dict(personaje_lineas_consecutivas_take)
+            temp_ultimo_personaje = ultimo_personaje
+
+            for intervencion in bloque:
+                if take_in is None:
+                    take_in = intervencion['in_td']
+                take_out = intervencion['out_td']
+
+                personaje = intervencion['personaje']
+                bloque_lineas += 1
+
+                # Actualizar líneas totales por personaje
+                temp_personaje_lineas_totales[personaje] = temp_personaje_lineas_totales.get(personaje, 0) + 1
+                if temp_personaje_lineas_totales[personaje] > max_lineas_por_personaje:
+                    bloque_valido = False
+                    break
+
+                # Actualizar líneas consecutivas
+                if personaje != temp_ultimo_personaje:
+                    temp_personaje_lineas_consecutivas[personaje] = 1
+                else:
+                    temp_personaje_lineas_consecutivas[personaje] = temp_personaje_lineas_consecutivas.get(personaje, 0) + 1
+
+                if temp_personaje_lineas_consecutivas[personaje] > max_lineas_consecutivas:
+                    bloque_valido = False
+                    break
+
+                temp_ultimo_personaje = personaje
+
+            if not bloque_valido:
+                # No podemos añadir este bloque, romper el intento de expandir el take
+                break
+
+            # Si el bloque es válido, lo añadimos realmente
+            for intervencion in bloque:
+                take_intervenciones.append(intervencion)
+            personaje_lineas_totales_take = temp_personaje_lineas_totales
+            personaje_lineas_consecutivas_take = temp_personaje_lineas_consecutivas
+            ultimo_personaje = temp_ultimo_personaje
+            lineas_count += bloque_lineas
+
+            # Verificar duración y cantidad de líneas tras añadir este bloque
+            duracion_take = take_out - take_in
             if duracion_take.total_seconds() > max_duracion_take:
                 break
 
-            if len(take_intervenciones) > max_lineas_take:
+            if lineas_count > max_lineas_take:
                 break
 
-            valid = True
-            personaje_lineas_consecutivas = {}
-            personaje_lineas_totales = {}
-            for i, intervencion in enumerate(take_intervenciones):
-                personaje = intervencion['personaje']
-                # Contar líneas totales por personaje
-                personaje_lineas_totales[personaje] = personaje_lineas_totales.get(personaje, 0) + 1
-                if personaje_lineas_totales[personaje] > max_lineas_por_personaje:
-                    valid = False
-                    break
-                # Contar líneas consecutivas por personaje
-                if i == 0 or personaje != take_intervenciones[i - 1]['personaje']:
-                    personaje_lineas_consecutivas[personaje] = 1
-                else:
-                    personaje_lineas_consecutivas[personaje] += 1
-                if personaje_lineas_consecutivas[personaje] > max_lineas_consecutivas:
-                    valid = False
-                    break
-            if not valid:
-                continue
+            # Si hemos llegado aquí, este take (pos -> end) es válido.
+            # Calcular el coste actual y decidir si cerramos el take aquí o intentamos añadir más bloques
+            personajes_en_take = set(i['personaje'] for i in take_intervenciones)
+            next_takes, next_cost = dp(end + 1)
+            current_cost = next_cost + len(personajes_en_take)
 
-            next_takes, next_cost = dp(end)
-
-            personajes_en_take = set([intervencion['personaje'] for intervencion in take_intervenciones])
-            total_takes_por_personaje = next_cost[0] + len(personajes_en_take)
-            total_takes = next_cost[1] + 1
-
-            current_cost = (total_takes_por_personaje, total_takes)
-
-            if best_cost is None or current_cost < best_cost:
-                best_takes = [tuple(take_intervenciones)] + list(next_takes)
+            if current_cost < best_cost:
+                best_takes = [tuple(take_intervenciones)] + next_takes
                 best_cost = current_cost
 
+            # Intentar añadir el siguiente bloque en el mismo take
+            # Si el siguiente bloque no se puede añadir, el bucle se romperá en la siguiente iteración
+
         if best_takes is None:
-            return [], (float('inf'), float('inf'))
+            return [], float('inf')
 
         return best_takes, best_cost
 
@@ -222,6 +266,19 @@ def leer_archivo(file_path):
         logging.error(f"Error al leer el archivo Excel: {e}")
     return None
 
+# Función auxiliar para formatear diálogos
+def formatear_dialogo(dialogo, tab_size=4, acumulado=False):
+    dialogo = str(dialogo).replace("“", '"').replace("”", '"')  # Reemplaza comillas tipográficas por comillas rectas
+    if acumulado:
+        return dialogo.replace("\n", " ")  # Reemplaza saltos de línea por espacios
+    else:
+        lineas = dialogo.split("\n")
+        tab = " " * tab_size
+        if len(lineas) == 1:
+            return lineas[0]
+        else:
+            return lineas[0] + "\n" + "\n".join([f"{tab}<< {linea}" for linea in lineas[1:]])
+
 # 9. Función para transformar Excel a TXT
 def transformar_excel_a_txt(ruta_excel, ruta_salida_txt):
     # Obtener el nombre del archivo sin la extensión y en mayúsculas
@@ -281,22 +338,6 @@ def transformar_excel_a_txt(ruta_excel, ruta_salida_txt):
             archivo_salida.write(f"{grupo.iloc[-1]['OUT']}\n\n")
 
     print(f"Archivo de texto generado en: {ruta_salida_txt}")
-
-# Función auxiliar para formatear diálogos
-def formatear_dialogo(dialogo, tab_size=4, acumulado=False):
-    """
-    Formatea el diálogo. Si es acumulado, no se añaden '<<', solo se concatenan las líneas con un espacio.
-    """
-    dialogo = str(dialogo).replace("“", '"').replace("”", '"')  # Reemplaza comillas tipográficas por comillas rectas
-    if acumulado:
-        return dialogo.replace("\n", " ")  # Reemplaza saltos de línea por espacios
-    else:
-        lineas = dialogo.split("\n")
-        tab = " " * tab_size
-        if len(lineas) == 1:
-            return lineas[0]
-        else:
-            return lineas[0] + "\n" + "\n".join([f"{tab}<< {linea}" for linea in lineas[1:]])
 
 # 10. Procesar archivo
 def procesar_archivo(file_path, selected_personajes, status_label, window, process_button):

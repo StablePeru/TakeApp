@@ -1,0 +1,383 @@
+PAW PATROL_S2_20_TAKEO
+
+TAKE 1
+00 00 42 08
+MARSHALL:	Patruilak loroa salbatu du
+00 00 43 22
+
+TAKE 2
+00 00 54 21
+RUBBLE:	(off) (batera ad lib)
+SKYE:	(off) (batera ad lib)
+RUBBLE:	(off) Ikusi-makusi… (on) Tukanak! (ad lib)
+SKYE:	Ikusi-makusi… Arranoa!
+RYDER:	(off) (ad lib) (on) Harpia-arranoa da hori.
+SKYE:	Espero dut Carlosen maskota-loroa ez hurbiltzea gehiegi.
+00 01 14 09
+
+TAKE 3
+00 01 19 00
+CARLOS:	Txakur-patruila!
+SKYE:	(batera ad lib)
+ZUMA:	(batera ad lib)
+MARSHALL:	(batera ad lib)
+RUBBLE:	(batera ad lib)
+ROCKY:	(batera ad lib)
+CARLOS:	Kaixo, lagunok!
+00 01 30 23
+
+TAKE 4
+00 01 30 20
+CHASE:	Carlos! (batera ad lib)
+SKYE:	(batera ad lib)
+ZUMA:	(batera ad lib)
+MARSHALL:	(batera ad lib)
+ROCKY:	(batera ad lib)
+RUBBLE:	Zer moduz?
+CARLOS:	Kaixo, Ryder!
+ZUMA:	(ad lib)
+RYDER:	Kaixo, Carlos! _ Ez, Mandy, paw pad hau ez da jostailu bat.
+CHASE:	(ad lib)
+00 01 43 04
+
+TAKE 5
+00 01 43 08
+ROCKY:	(ad lib)
+MARSHALL:	(ad lib)
+RUBBLE:	(ad lib) Ni ere pozten naiz zu ikusteaz, Mandy.
+CHASE:	(batera ad lib)
+SKYE:	(batera ad lib)
+ZUMA:	(batera ad lib)
+MARSHALL:	(batera ad lib)
+RUBBLE:	(batera ad lib)
+ROCKY:	(batera ad lib)
+RYDER:	(batera ad lib)
+00 01 52 14
+
+TAKE 6
+00 01 52 18
+CARLOS:	Mila esker etortzeagatik.
+RYDER:	Azkenean itzuli al da zure loroa?
+CARLOS:	Ez, Mateo desagertu egin da. Kezkatuta nago. Txikia izateaz gain, ez dago ohituta bakarrik ibiltzera.
+RYDER:	(ad lib) Harpia-arrano bat ikusi dugu lehen.
+CARLOS:	(ad lib) Mateok ez dauka zereginik horrelako arrano baten aurka.
+RYDER:	Ez kezkatu txakur-patruilak topatuko du Mateo. Txakur-patruilarentzat ez dago ezinezko lororik!
+00 02 16 11
+
+TAKE 7
+00 02 19 12
+RYDER:	Txakurtxoak patruila-autobusera!
+00 02 21 16
+
+TAKE 8
+00 02 21 22
+RUBBLE:	(batera) Ryder deika!
+MARSHALL:	(batera) Ryder deika!
+SKYE:	(batera) Ryder deika! (ad lib)
+MARSHALL:	(ad lib) Kontuz!
+CHASE:	(batera ad lib)
+RUBBLE:	(batera ad lib)
+SKYE:	(batera ad lib)
+ROCKY:	(batera ad lib)
+ZUMA:	(batera ad lib)
+ROCKY:	Non dago Marshall?
+00 02 36 23
+
+TAKE 9
+00 02 36 23
+MARSHALL:	Banator!
+ROCKY:	Galdetu behar nuen.
+MARSHALL:	(ad lib)
+CHASE:	(batera ad lib)
+RUBBLE:	(batera ad lib)
+SKYE:	(batera ad lib)
+ROCKY:	(batera ad lib)
+ZUMA:	(batera ad lib)
+SKYE:	(ad lib)
+ZUMA:	(ad lib)
+00 02 52 04
+
+TAKE 10
+00 02 52 14
+RUBBLE:	(ad lib)
+MARSHALL:	(ad lib)
+ROCKY:	(ad lib)
+CHASE:	Txakur-patruila ekintzarako prest, jauna.
+RYDER:	(on-off) Barkatu oihaneko dibertsioa eteteagatik, baina larrialdi bat dugu. Carlosen loro txikia, Mateo, oihanean desagertu da.
+MARSHALL:	(ad lib)
+CHASE:	Bakarrik?
+RUBBLE:	Loro gaixoa!
+00 03 10 10
+
+TAKE 11
+00 03 10 10
+RYDER:	Mateok ezingo du bakarrik biziraun oihanean. Gorri- eta urdin-kolorekoa da. Gainera, Carlosek hitz egiteko entrenatu du.
+00 03 19 19
+
+TAKE 12
+00 03 19 19
+CARLOS:	Bai, hau irakatsi diot (ad lib) Lagundu! (ad lib)
+00 03 23 22
+
+TAKE 13
+00 03 23 22
+MARSHALL:	(ad lib)
+00 03 24 12
+
+TAKE 14
+00 03 24 12
+CHASE:	(batera ad lib)
+SKYE:	(batera ad lib)
+ROCKY:	(batera ad lib)
+ZUMA:	(batera ad lib)
+RYDER:	(off) Skye, zure helikopteroarekin Mateo bilatuko duzu zerutik.
+SKYE:	Hegan egitea itzela da!
+RYDER:	(off) Chase, zure dronea erabiliko duzu zuhaitzak arakatzeko.
+CHASE:	Chase beti adi!
+00 03 39 14
+
+TAKE 15
+00 03 39 14
+RYDER:	(off) Bikain! Marshall, zure eskailera erabiliko duzu Mateo bilatzeko hosto artean.
+MARSHALL:	Jo eta su!
+RYDER:	Txakur-patruila, aurrera!
+CHASE:	(batera ad lib)
+MARSHALL:	(batera ad lib)
+ZUMA:	(ad lib)
+RUBBLE:	(ad lib)
+CHASE:	(ad lib)
+00 03 59 01
+
+TAKE 16
+00 04 07 22
+SKYE:	(ad lib)
+00 04 12 11
+
+TAKE 17
+00 04 31 22
+RYDER:	Ea ba, lagunok, banatu gaitezen!
+00 04 34 06
+
+TAKE 18
+00 04 34 14
+CHASE:	Aurrera!
+00 04 35 03
+
+TAKE 19
+00 04 35 19
+MARSHALL:	(ad lib)
+SKYE:	(off) (ad lib)
+MARSHALL:	Kaixo! Lasterketa nahi duzu? Goazen!
+00 04 45 16
+
+TAKE 20
+00 04 51 14
+CHASE:	(ad lib) Dronea!
+00 04 53 19
+
+TAKE 21
+00 05 03 22
+MARSHALL:	(off) Gauza gorri bat ikusi dut! _ (on) Oihaneko zuhaitzik garaiena ezkutaleku egokia da! (ad lib) Eskailera! Gauza gorri bat ikusi dut lehen. Lore bat besterik ez da. _ (off) (ad lib) _ (on) (ad lib) _ Mandy? Zatoz!
+00 05 32 00
+
+TAKE 22
+00 05 36 17
+CHASE:	(off) Gorria, gorria… _ (ad lib) (on) Hori ez da loroa, zapotxo bat baizik! (off) Hortxe gorria! _ (on) Marshall, kaskoa galdu duzu?
+00 05 48 11
+
+TAKE 23
+00 05 58 11
+MARSHALL:	Mandyk dauka. Hartzen saiatzen naizen bakoitzean, platano bat sartzen dit ahoan! _ (ad lib) Ikusten?
+00 06 06 23
+
+TAKE 24
+00 06 06 23
+CHASE:	(ad lib)
+00 06 08 23
+
+TAKE 25
+00 06 15 04
+SKYE:	(off) Ryder, txori gorri bat! Loro okerra da. _ Hara, arranoa! _ (on) Ene, ihes egiteko maniobrak!
+00 06 27 09
+
+TAKE 26
+00 06 37 09
+RYDER:	(off) Skye, ondo zaude?
+SKYE:	Bai. _ Baina gutxigatik. _ (off) Itxaron. Mateo loro gorri-urdina da, ezta? _ (on) Topatu dut! _ (off) Tenplu zaharrera doa.
+RYDER:	Bagoaz, Skye!
+00 06 54 13
+
+TAKE 27
+00 07 01 00
+MARSHALL:	Tenplu zahar hau beldurgarria da. Norbait begira dagoelakoan nago. (ad lib) _ Aizu!
+CARLOS:	Marshallen kaskoa da hori.
+MATEO:	(off) Lagundu! Lagundu!
+CARLOS:	Mateo!
+MARSHALL:	Goitik dator! Norbaitek igotzea lortuko balu… _ Noski, norbait hori neu naiz, ezta?
+00 07 28 15
+
+TAKE 28
+00 07 32 05
+MARSHALL:	Ez dut ikusten jaitsi egingo naiz.
+RYDER:	Hor goian egon beharko luke.
+MARSHALL:	Ados. Bilatzera noa. _ Mateo!
+MATEO:	(ad lib) Lagundu!
+MARSHALL:	(on-off) Erreskatatzera nator, Mateo! (ad lib) _ (on) (ad lib)
+MATEO:	(ad lib)
+MARSHALL:	Itxoin, Mateo!
+RYDER:	(off-on) Aurkitu duzu?
+00 08 01 11
+
+TAKE 29
+00 08 01 11
+MARSHALL:	Topatu dut. Eta hemendik joan da. _ Hara! _ (ad lib) (off) Arrautza?
+MATEO:	(ad lib)
+MARSHALL:	(ad lib) Badakit zergatik ez duen etorri nahi begira!
+MATEO:	Lagundu!
+RYDER:	Zer? Mateo neska da? _ (ad lib)
+MARSHALL:	(off) (ad lib)
+RYDER:	Kontuz, Marshall!
+MARSHALL:	(off) (ad lib)
+CARLOS:	(ad lib) Hartuta!
+MARSHALL:	Mila esker, Carlos!
+00 08 30 24
+
+TAKE 30
+00 08 30 24
+ROCKY:	(ad lib) (off) Ondo zaude, Ryder?
+00 08 33 22
+
+TAKE 31
+00 08 33 22
+RYDER:	Ondo nago, baina eskertuko nuke laguntza.
+CHASE:	Chase beti adi!
+RYDER:	(ad lib)
+ROCKY:	(batera ad lib)
+ZUMA:	(batera ad lib)
+MARSHALL:	(batera ad lib)
+CARLOS:	(batera ad lib)
+RUBBLE:	(batera ad lib)
+SKYE:	(batera ad lib)
+RYDER:	Ikusten? Ondo nago.
+00 08 47 24
+
+TAKE 32
+00 08 48 06
+ROCKY:	(batera ad lib)
+ZUMA:	(batera ad lib)
+MARSHALL:	(batera ad lib)
+CARLOS:	(batera) Bai!
+RUBBLE:	(batera ad lib)
+SKYE:	(batera ad lib)
+00 08 49 22
+
+TAKE 33
+00 08 49 22
+RYDER:	(ad lib)
+CARLOS:	Mila esker Mateo topatzeagatik, baita bere habia ere.
+CHASE:	Orduan, Mateo neska da?
+CARLOS:	Ama da! (ad lib) Orain Matea deituko diot. _ Ezin du joan txita jaio arte. Berarekin geldituko naiz, ondo zaintzeko.
+RYDER:	Baita gu ere arranoa hemen inguruan dabil.
+00 09 10 06
+
+TAKE 34
+00 09 12 02
+ZUMA:	(off) (ad lib) (off-on) Gauak inoiz baino beltz eta ilunagoak dira oihanean.
+RUBBLE:	Ni ez naiz oihanean gelditzearen beldur! (ad lib) _ Gozokia besterik ez zen.
+CHASE:	(ad lib atzean)
+ZUMA:	(batera ad lib)
+ROCKY:	(batera ad lib)
+MARSHALL:	(batera ad lib)
+CHASE:	(batera ad lib)
+RYDER:	(batera ad lib)
+SKYE:	(batera ad lib)
+00 09 28 21
+
+TAKE 35
+00 09 29 03
+MATEO:	(ad lib)
+CARLOS:	(ad lib)
+MATEO:	(ad lib)
+CARLOS:	Matea? (ad lib) _ Ryder, jaiotzear dago!
+00 09 48 24
+
+TAKE 36
+00 09 48 24
+RYDER:	Berehala goaz! Goazen!
+00 09 51 08
+
+TAKE 37
+00 09 51 08
+RUBBLE:	(batera ad lib)
+CHASE:	(batera ad lib)
+SKYE:	(batera ad lib)
+RUBBLE:	(batera ad lib)
+ZUMA:	(batera ad lib)
+ROCKY:	(batera ad lib)
+ZUMA:	Zelako lorotxo polita!
+ROCKY:	(batera ad lib)
+MARSHALL:	(batera ad lib)
+00 10 02 19
+
+TAKE 38
+00 10 04 11
+RYDER:	(off) Harpia-arranoa!
+CARLOS:	Lorotxo, ez!
+RYDER:	Arranoaz arduratuko gara zoaz lurrera txita erortzen bada.
+CARLOS:	Ados!
+00 10 14 20
+
+TAKE 39
+00 10 28 12
+CHASE:	(batera ad lib)
+RYDER:	(batera) Ez horixe! _ (off-on) Arranoa uxatu behar dugu. Chase, badakizu zer egin.
+CHASE:	(ad lib)
+00 10 36 23
+
+TAKE 40
+00 10 46 22
+RYDER:	Oso ondo, Chase!
+CHASE:	Mila esker. _ Harrapa nazazu!
+RYDER:	(off) Hegaldi bikaina, Chase. (on) Arranoa urruntzea lortzen baduzu ez digu kalterik egingo.
+00 11 07 22
+
+TAKE 41
+00 11 08 16
+ROCKY:	(off) (batera ad lib)
+RUBBLE:	(off) (batera ad lib)
+CARLOS:	Zatoz hona!
+RUBBLE:	(off-on) (batera ad lib)
+SKYE:	(off-on) (batera ad lib)
+RYDER:	(off-on) (batera ad lib)
+MARSHALL:	(off-on) (batera ad lib)
+ROCKY:	(off-on) (batera ad lib)
+ZUMA:	(off-on) (batera ad lib)
+00 11 17 18
+
+TAKE 42
+00 11 18 06
+RUBBLE:	(batera ad lib)
+CHASE:	(batera ad lib)
+CARLOS:	(batera ad lib)
+RYDER:	(batera ad lib)
+MARSHALL:	(batera ad lib)
+SKYE:	(batera ad lib)
+CHASE:	Lorotxo zintzoa da.
+RYDER:	Bada. Eta zuek txakur zintzoak izan zarete gaur.
+CARLOS:	(off-on) Mila esker, Ryder! Eta txakurtxoak! Matea eta txita salbu egongo dira orain.
+00 11 31 22
+
+TAKE 43
+00 11 31 22
+RYDER:	Behar bagaituzu, abisatu eta kito!
+MATEO:	Lagundu!
+TXITA:	Lagundu!
+RUBBLE:	(batera ad lib)
+CHASE:	(batera ad lib)
+CARLOS:	(batera ad lib)
+RYDER:	(batera ad lib)
+MARSHALL:	(batera ad lib)
+SKYE:	(batera ad lib)
+ROCKY:	(batera ad lib)
+00 11 40 04
+
